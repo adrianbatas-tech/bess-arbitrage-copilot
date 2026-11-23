@@ -1,0 +1,11 @@
+You are working on BESS Arbitrage Copilot, a React (TanStack Start) app built on Base44; follow AGENTS.md for platform conventions.
+
+- Keep all financial and dispatch math in src/lib/bessCalc.js as pure functions; components only call them.
+- Every new calculation function gets a unit test in tests/bessCalc.test.mjs (node:test + node:assert).
+- Use the Base44 SDK InvokeLLM integration for AI; never hardcode API keys or tokens.
+- Validate user inputs with validateInputs() before any calculation or LLM call; show errors inline.
+- The LLM must only narrate figures computed by bessCalc.js. Do not let it invent numbers.
+- Price data is synthetic; never introduce real company data, plant names or contract terms.
+- Units: PHP/MWh internally, PHP/kWh in the UI; MW and MWh for the battery.
+- Prefer small, readable components and Tailwind utility classes. No new dependencies without reason.
+- Write clear commit messages in the imperative ("Add IRR calculation").
