@@ -1,0 +1,68 @@
+{
+  "name": "AnalysisRun",
+  "type": "object",
+  "properties": {
+    "session_id": {
+      "type": "string",
+      "description": "Random per-browser session id; history is scoped to it."
+    },
+    "scenario": {
+      "type": "string",
+      "enum": [
+        "base",
+        "high",
+        "low"
+      ],
+      "enumColors": [
+        "blue",
+        "green",
+        "yellow"
+      ]
+    },
+    "inputs": {
+      "type": "object",
+      "description": "Engine inputs used for the run (powerMW, energyMWh, rte, capexPhpPerKwh, omPhpPerKwYr, years, discountRate)."
+    },
+    "results": {
+      "type": "object",
+      "description": "projectEconomics output: annualMargin, fixedOm, annualCash, capex, npv, irr, paybackYears."
+    },
+    "memo": {
+      "type": "object",
+      "description": "AI memo: summary, key_drivers, risks, recommendation."
+    },
+    "ai_calls": {
+      "type": "number"
+    },
+    "ai_latency_ms": {
+      "type": "number"
+    },
+    "ai_status": {
+      "type": "string",
+      "enum": [
+        "ok",
+        "error",
+        "none"
+      ],
+      "enumColors": [
+        "green",
+        "red",
+        "gray"
+      ]
+    }
+  },
+  "required": [
+    "session_id",
+    "scenario"
+  ],
+  "rls": {
+    "create": {},
+    "read": {},
+    "update": {},
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}
