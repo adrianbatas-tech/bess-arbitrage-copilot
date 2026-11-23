@@ -3,7 +3,7 @@
 AI-assisted screening tool for battery energy storage (BESS) arbitrage in the Philippine
 wholesale electricity spot market (WESM).
 
-**Live app:** LIVE-URL (added after publishing)  
+**Live app:** https://bess-arbitrage-copilot-4d3c23f9.base44.app  
 **Demo video (2 min):** LINK  
 **Idea validation:** [docs/Validation_Adrian_Atas.docx](docs/Validation_Adrian_Atas.docx)  
 **PRD:** [docs/PRD_Adrian_Atas.docx](docs/PRD_Adrian_Atas.docx)  
